@@ -1,0 +1,21 @@
+{
+  "detection": {
+    "mnn_path": "nanodet-plus-0.5x-416_head-face.mnn",
+    "input_size": 416,
+    "input_name": "data",
+    "output_name": "output",
+    "labels": ["head","face"],
+    "device_type": "cpu",
+    "num_thread": 4,
+    "score_threshold": 0.45,
+    "nms_threshold": 0.4
+  },
+  "landmark": {
+    "mnn_path": "pfld_96x96_98-keypoints.mnn",
+    "input_name": "data",
+    "output_name": "conv5_fwd",
+    "num_thread": 1,
+    "min_width": 200,
+    "min_height": 300
+  }
+}
