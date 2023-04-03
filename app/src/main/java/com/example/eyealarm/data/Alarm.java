@@ -128,7 +128,17 @@ public class Alarm {
 
         intent.putExtra(TITLE, title);
 
-        PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(context, alarmId, intent, 0);
+        PendingIntent alarmPendingIntent = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            alarmPendingIntent = PendingIntent.getBroadcast
+                    (context, alarmId, intent, PendingIntent.FLAG_MUTABLE);
+        }
+        else
+        {
+            alarmPendingIntent = PendingIntent.getBroadcast
+                    (context, alarmId, intent, 0);
+        }
+//        PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(context, alarmId, intent, 0);
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
@@ -218,7 +228,11 @@ public class Alarm {
         alarmManager.cancel(alarmPendingIntent);
         this.started = false;
 
-        String toastText = String.format("Alarm cancelled for %02d:%02d with id %d", hour, minute, alarmId);
+        String cancel_alarm = "My alarm";
+        if(title.length() != 0){
+            cancel_alarm = title;
+        }
+        String toastText = String.format("Alarm cancelled for %02d:%02d with name %s", hour, minute, cancel_alarm);
         Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show();
         Log.i("cancel", toastText);
     }

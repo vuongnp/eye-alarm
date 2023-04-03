@@ -55,7 +55,7 @@ public class GameActivity extends AppCompatActivity {
     int thanoss[] = {R.drawable.thanos1, R.drawable.thanos2, R.drawable.thanos3, R.drawable.thanos4, R.drawable.thanos5, R.drawable.thanos6, R.drawable.thanos7,
         R.drawable.thanos8, R.drawable.thanos9, R.drawable.thanos10, R.drawable.thanos11, R.drawable.thanos12};
     int supergirls[] = {R.drawable.supergirl1, R.drawable.supergirl2, R.drawable.supergirl3, R.drawable.supergirl4, R.drawable.supergirl5, R.drawable.supergirl6, R.drawable.supergirl7,
-        R.drawable.supergirl8, R.drawable.supergirl9, R.drawable.supergirl10, R.drawable.supergirl11, R.drawable.supergirl2};
+        R.drawable.supergirl8, R.drawable.supergirl9, R.drawable.supergirl10, R.drawable.supergirl11, R.drawable.supergirl12};
     int supermans[] = {R.drawable.superman1, R.drawable.superman2, R.drawable.superman3, R.drawable.superman4, R.drawable.superman5, R.drawable.superman6, R.drawable.superman7,
         R.drawable.superman8, R.drawable.superman9, R.drawable.superman10, R.drawable.superman11, R.drawable.superman12};
 
